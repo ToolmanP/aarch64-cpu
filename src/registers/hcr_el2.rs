@@ -128,6 +128,13 @@ register_bitfields! {u64,
             EnableTrapGeneralExceptionsToEl2 = 1,
         ],
 
+        /// Trap Virtual Memory controls, from EL0.
+
+        TVM   OFFSET(26) NUMBITS(1) [
+            DisableTrapVMCtrlRegistersToEl2 = 0,
+            EnableTrapVMCtrlRegistersToEl2 = 1,
+        ],
+
         /// Trap SMC instructions. Traps EL1 execution of SMC instructions to EL2, when EL2 is
         /// enabled in the current Security state.
         ///
@@ -164,6 +171,11 @@ register_bitfields! {u64,
         TSC   OFFSET(19) NUMBITS(1) [
             DisableTrapEl1SmcToEl2 = 0,
             EnableTrapEl1SmcToEl2 = 1,
+        ],
+
+        TWE OFFSET(15) NUMBITS(1) [
+            DisableTrapEl1WfetoEl2 = 0,
+            EnableTrapEl1WfetoEl2 = 1
         ],
 
         /// Default Cacheability.
@@ -262,6 +274,11 @@ register_bitfields! {u64,
             EnableVirtualFIQ = 1,
         ],
 
+        PTW OFFSET(2) NUMBITS(1) [
+            DisablePTW = 0,
+            EnablePTW = 1
+        ],
+
         /// Set/Way Invalidation Override. Causes Non-secure EL1 execution of the data cache
         /// invalidate by set/way instructions to perform a data cache clean and invalidate by
         /// set/way:
@@ -286,7 +303,10 @@ register_bitfields! {u64,
         ///
         /// When HCR_EL2.TGE is 1, the PE ignores the value of this field for all purposes other
         /// than a direct read of this field.
-        SWIO OFFSET(1) NUMBITS(1) [],
+        SWIO OFFSET(1) NUMBITS(1) [
+            Disable = 0,
+            Enable = 1
+        ],
 
         /// Virtualization enable. Enables stage 2 address translation for the EL1&0 translation regime,
         /// when EL2 is enabled in the current Security state. The possible values are:
