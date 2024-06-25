@@ -27,6 +27,9 @@ mod cntp_ctl_el0;
 mod cntp_cval_el0;
 mod cntp_tval_el0;
 mod cntpct_el0;
+mod cnthp_ctl_el2;
+mod cnthp_cval_el2;
+mod cnthp_tval_el2;
 mod cntv_ctl_el0;
 mod cntv_cval_el0;
 mod cntv_tval_el0;
@@ -93,6 +96,7 @@ mod vbar_el3;
 mod vtcr_el2;
 mod vttbr_el2;
 mod vmpidr_el2;
+
 
 mod icc_ap0r_el1;
 mod icc_ap1r_el1;
@@ -171,6 +175,9 @@ pub use cntp_ctl_el0::CNTP_CTL_EL0;
 pub use cntp_cval_el0::CNTP_CVAL_EL0;
 pub use cntp_tval_el0::CNTP_TVAL_EL0;
 pub use cntpct_el0::CNTPCT_EL0;
+pub use cnthp_ctl_el2::CNTHP_CTL_EL2;
+pub use cnthp_tval_el2::CNTHP_TVAL_EL2;
+pub use cnthp_cval_el2::CNTHP_CVAL_EL2;
 pub use cntv_ctl_el0::CNTV_CTL_EL0;
 pub use cntv_cval_el0::CNTV_CVAL_EL0;
 pub use cntv_tval_el0::CNTV_TVAL_EL0;
