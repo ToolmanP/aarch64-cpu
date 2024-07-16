@@ -306,4 +306,4 @@ impl TTBR for ttbr1_el1::Reg {}
 impl TTBR for ttbr0_el2::Reg {}
 
 #[doc(inline)]
-pub use tock_registers::interfaces::{Readable, Writeable};
+pub use tock_registers::interfaces::{Readable, Writeable, ReadWriteable};
