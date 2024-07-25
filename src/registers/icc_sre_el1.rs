@@ -48,7 +48,7 @@ impl Writeable for Reg {
     type T = u64;
     type R = ICC_SRE_EL1::Register;
 
-    sys_coproc_write_raw!(u64, "HCR_EL2", "x");
+    sys_coproc_write_raw!(u64, "ICC_SRE_EL1", "x");
 }
 
 pub const ICC_SRE_EL1: Reg = Reg {};
