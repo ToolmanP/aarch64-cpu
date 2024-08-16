@@ -1,7 +1,6 @@
-use tock_registers::register_bitfields;
-use tock_registers::interfaces::*;
+use tock_registers::{interfaces::*, register_bitfields};
 
-register_bitfields!{u64,
+register_bitfields! {u64,
     pub ICH_VTR_EL2 [
         PRI   OFFSET(29) NUMBITS(3) [],
         PRE   OFFSET(26) NUMBITS(3) [],
@@ -34,7 +33,6 @@ register_bitfields!{u64,
         ]
     ]
 }
-
 
 struct Reg {}
 
